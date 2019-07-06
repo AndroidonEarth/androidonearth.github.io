@@ -1,2 +1,4 @@
 # androidonearth.github.io
-My personal website
+My personal website, hosted on github pages.
+
+andrewswaim.com
