@@ -124,10 +124,9 @@
 					});
 
 				// Clear input fields
-					$("input").each(function() {
+					$(".field").each(function() {
 						$(this).val('');
 					});
-					$("textarea").val('');
 
 				// Deactivate all links.
 					$nav_links.removeClass('active');
