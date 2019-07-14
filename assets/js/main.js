@@ -12,7 +12,7 @@
 		$main = $('#main'),
 		$panels = $main.children('.panel'),
 		$nav = $('#nav'), $nav_links = $nav.children('a'),
-		$projects = $('#projects'), $project_articles = $projects.children('article');
+		$demos = $panels.children('.demo').children('iframe');
 
 	// Breakpoints.
 		breakpoints({
@@ -63,16 +63,16 @@
 
 				 		$panel = $panels.filter(window.location.hash);
 						$link = $nav_links.filter('[href="' + window.location.hash + '"]');
-
 					}
 
 				// No panel/link? Default to first.
-					if (!$panel
-					||	$panel.length == 0) {
+					if (!$panel || $panel.length == 0) {
 
-						$panel = $panels.first();
+						$panel = $panels.first();						
+					}
+					if (!$link || $link.length == 0) {
+
 						$link = $nav_links.first();
-
 					}
 
 				// Deactivate all panels except this one.
@@ -106,7 +106,6 @@
 						// No target panel? Bail.
 							if ($panel.length == 0)
 								return;
-
 					}
 
 				// No panel/link? Default to first.
@@ -114,11 +113,15 @@
 
 						$panel = $panels.first();
 						$link = $nav_links.first();
-
 					}
 
 				// Deactivate all panels.
 					$panels.addClass('inactive');
+
+				// Unload iframes.
+					$("iframe").each(function() {
+						$(this).attr('src', "about:blank");
+					});
 
 				// Deactivate all links.
 					$nav_links.removeClass('active');
