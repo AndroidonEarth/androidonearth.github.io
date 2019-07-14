@@ -123,6 +123,11 @@
 						$(this).attr('src', "about:blank");
 					});
 
+				// Clear input fields
+					$("input").each(function() {
+						$(this).val('');
+					});
+
 				// Deactivate all links.
 					$nav_links.removeClass('active');
 
