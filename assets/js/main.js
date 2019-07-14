@@ -11,7 +11,8 @@
 		$wrapper = $('#wrapper'),
 		$main = $('#main'),
 		$panels = $main.children('.panel'),
-		$nav = $('#nav'), $nav_links = $nav.children('a');
+		$nav = $('#nav'), $nav_links = $nav.children('a'),
+		$projects = $('#projects'), $project_articles = $projects.children('article');
 
 	// Breakpoints.
 		breakpoints({
@@ -87,6 +88,9 @@
 					$window.scrollTop(0);
 
 			})();
+
+		// Projects.
+		
 
 		// Hashchange event.
 			$window.on('hashchange', function(event) {
