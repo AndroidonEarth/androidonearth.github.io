@@ -116,34 +116,39 @@
 								<header>
 									<h2>Contact Me</h2>
 								</header>
-								<form action="https://app.99inbound.com/api/e/OyzL0BGX" method="POST" target="_blank">
+								<iframe name="dummy" style="display:none;"></iframe>
+								<form id="contact-form" action="https://app.99inbound.com/api/e/OyzL0BGX" method="POST">
 									<div>
 										<div class="row">
 											<div class="col-6 col-12-medium">
-												<input class="field" type="text" name="name" placeholder="Name" />
+												<input class="field" type="text" id="name" placeholder="Name" />
 											</div>
 											<div class="col-6 col-12-medium">
-												<input class="field" type="text" name="email" placeholder="Email" />
+												<input class="field" type="text" id="email" placeholder="Email" />
 											</div>
 											<div class="col-12">
-												<input class="field" type="text" name="subject" placeholder="Subject" />
+												<input class="field" type="text" id="subject" placeholder="Subject" />
 											</div>
 											<div class="col-12">
-												<textarea class="field" name="message" placeholder="Message" rows="6"></textarea>
+												<textarea class="field" id="message" placeholder="Message" rows="6"></textarea>
 											</div>
-											<div class="col-12">
+											<div class="col-6 col-12-medium">
 												<input type="submit" value="Send Message" />
+											</div>
+											<div class="col-6 col-12-medium">
+												<p id="notification" class="field"></p>
 											</div>
 										</div>
 									</div>
 								</form>
 							</article>
+							<!--
 							<article id="thank-you" class="panel">
 								<header>
-									<h2>Thank you for your submission</h2>
+									<h2>Thank you for your submission!</h2>
 								</header>
 							</article>
-
+							-->
 					</div>
 
 				<!-- Footer -->
@@ -153,9 +158,10 @@
 						</ul>
 					</div>
 
-			</div>
+			</div>			
 
 		<!-- Scripts -->
+			<script src="assets/js/axios.min.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>

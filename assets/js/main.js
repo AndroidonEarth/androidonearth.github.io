@@ -12,7 +12,8 @@
 		$main = $('#main'),
 		$panels = $main.children('.panel'),
 		$nav = $('#nav'), $nav_links = $nav.children('a'),
-		$demos = $panels.children('.demo').children('iframe');
+		$contact = $('#contact-form'),
+		$notification = $('#notification');
 
 	// Breakpoints.
 		breakpoints({
@@ -50,6 +51,38 @@
 						window.location.hash = href;
 
 			});
+
+	// Contact.
+		$contact.submit(function(event) { 
+
+			// Prevent default.
+				event.preventDefault();
+
+			// Send a POST request with Axios
+				axios({
+				    method: 'post',
+				    url: 'https://app.99inbound.com/api/e/OyzL0BGX',
+				    headers: {
+				    	'Content-Type': 'application/json',
+				    	'Accept': 'application/json'
+				    },
+				    data: {
+				  		name: $("#name").val(),
+				  		email: $("#email").val(),
+				  		subject: $("#subject").val(),
+				  		message: $("#message").val()
+				    }
+				}).then((response) => { console.log(response); })
+
+			// Clear input field.
+				$(".field").each(function() {
+					$(this).val('');
+				});
+
+			// Display message.
+				$notification.text('Thank you for your submission.');
+				//else { $notification.text('There was an error submitting your message.'); }
+		});
 
 	// Panels.
 
@@ -127,6 +160,9 @@
 					$(".field").each(function() {
 						$(this).val('');
 					});
+
+				// Clear notification.
+					$notification.text('');
 
 				// Deactivate all links.
 					$nav_links.removeClass('active');
