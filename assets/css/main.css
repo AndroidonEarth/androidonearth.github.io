@@ -1327,7 +1327,7 @@ input, select, textarea {
 	body, input, textarea, select {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 300;
-		color: #777777;
+		color: #666666;
 		font-size: 20pt;
 		line-height: 1.75em;
 	}
@@ -1383,11 +1383,6 @@ input, select, textarea {
 		font-size: 1.25em;
 		letter-spacing: -0.015em;
 	}
-
-		h3.resume-title {
-			padding-bottom: 0.25em;
-			border-bottom: dashed 2px rgba(213, 209, 203, 0.5);
-		}
 
 	@media screen and (max-width: 736px) {
 
@@ -1482,7 +1477,7 @@ input, select, textarea {
 	form textarea {
 		-webkit-appearance: none;
 		border: 0;
-		background: #f4f4f4;
+		background: #e6e6e6;
 		padding: 0.75em;
 		width: 100%;
 		-moz-transition: background-color .25s ease-in-out;
@@ -1599,7 +1594,7 @@ input, select, textarea {
 		transition: background-color .25s ease-in-out;
 		-webkit-appearance: none;
 		display: inline-block;
-		background-color: #222222;
+		background-color: #444444;
 		color: #ffffff;
 		border: 0;
 		cursor: pointer;
@@ -2248,4 +2243,20 @@ input, select, textarea {
 				margin-left: 0.5em;
 			}
 
+		}
+
+/* Resume */
+
+		#resume h3 {
+			padding-bottom: 0.25em;
+			margin-bottom: 0.75em;
+			border-bottom: dashed 2px rgba(213, 209, 203, 0.5);
+		}
+
+		#resume p {
+			margin-bottom: 0;
+		}
+
+		#resume ul {
+			margin-bottom: 1em;
 		}
