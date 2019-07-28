@@ -1784,7 +1784,7 @@ input, select, textarea {
 			height: 1em;
 			line-height: 0.9em;
 			font-size: 2.5em;
-			margin: 0 0.25em 0 0.25em;
+			margin: 0 0.5em;
 			opacity: 0.35;
 			outline: 0;
 			-moz-transition: opacity .25s ease-in-out;
@@ -1820,10 +1820,11 @@ input, select, textarea {
 			#nav a span {
 				display: block;
 				position: absolute;
-				background: #222222;
-				color: #ffffff;
+				background: #ffffff;
+				color: #222222;
 				top: -2.75em;
 				font-size: 0.3em;
+				font-weight: 500;
 				height: 2.25em;
 				line-height: 2.25em;
 				left: 50%;
@@ -1843,7 +1844,7 @@ input, select, textarea {
 					bottom: -0.4em;
 					left: 50%;
 					margin-left: -0.6em;
-					border-top: solid 0.6em #222222;
+					border-top: solid 0.6em #ffffff;
 					border-left: solid 0.6em transparent;
 					border-right: solid 0.6em transparent;
 				}
@@ -1867,7 +1868,7 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#nav a span {
-				display: none;
+				opacity: 1.0;
 			}
 
 		}
@@ -2034,10 +2035,10 @@ input, select, textarea {
 						-webkit-object-fit: cover;
 						-ms-object-fit: cover;
 						object-fit: cover;
-						-moz-object-position: center;
-						-webkit-object-position: center;
-						-ms-object-position: center;
-						object-position: center;
+						-moz-object-position: top;
+						-webkit-object-position: top;
+						-ms-object-position: top;
+						object-position: top;
 					}
 
 					#main > .panel.intro .pic .arrow {
@@ -2113,7 +2114,7 @@ input, select, textarea {
 					}
 
 						#main > .panel.intro .pic {
-							height: 25em;
+							height: 40em;
 							width: 100%;
 						}
 
@@ -2127,7 +2128,7 @@ input, select, textarea {
 				@media screen and (max-width: 736px) {
 
 					#main > .panel.intro .pic {
-						height: 20em;
+						height: 30em;
 					}
 
 					#main > .panel.intro header {
@@ -2198,17 +2199,18 @@ input, select, textarea {
 				}
 
 				#footer a {
-					margin: 0 0.4em;
+					margin: 0 1em;
 					top: 0.2em;
 				}
 
 				#footer a span {
 					display: block;
 					position: absolute;
-					background: #222222;
-					color: #ffffff;
+					background: #ffffff;
+					color: #222222;
 					top: -2.75em;
 					font-size: 0.5em;
+					font-weight: 500;
 					height: 2.25em;
 					line-height: 2.25em;
 					left: 50%;
@@ -2228,7 +2230,7 @@ input, select, textarea {
 					bottom: -0.4em;
 					left: 50%;
 					margin-left: -0.6em;
-					border-top: solid 0.6em #222222;
+					border-top: solid 0.6em #ffffff;
 					border-left: solid 0.6em transparent;
 					border-right: solid 0.6em transparent;
 				}
@@ -2236,6 +2238,13 @@ input, select, textarea {
 				#footer a:hover span {
 					opacity: 1.0;
 				}
+
+		@media screen and (max-width: 980px) {
+
+			#footer a span {
+				opacity: 0.75;
+			}
+		}
 
 		@media screen and (max-width: 736px) {
 
@@ -2296,4 +2305,116 @@ input, select, textarea {
 			margin-bottom: 1em;
 		}
 
-		
+	
+/* Download */
+
+	#download {
+		text-align: center;
+		cursor: default;
+		font-size: 70%;
+		position: absolute;
+		right: 2em;
+		top: 3em;
+	}
+
+		#download a {
+			position: relative;
+			display: inline-block;
+			color: #000000;
+			width: 1em;
+			height: 1em;
+			line-height: 0.9em;
+			font-size: 2.5em;
+			margin: 0 0.25em 0 0.25em;
+			opacity: 0.35;
+			outline: 0;
+			-moz-transition: opacity .25s ease-in-out;
+			-webkit-transition: opacity .25s ease-in-out;
+			-ms-transition: opacity .25s ease-in-out;
+			transition: opacity .25s ease-in-out;
+		}
+
+			#download a.icon:before {
+				padding-right: 0;
+			}
+
+			#download a:before {
+				font-size: 0.8em;
+			}
+
+			#download a:after {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 50%;
+				bottom: -0.75em;
+				margin-left: -0.5em;
+				border-bottom: solid 0em #ffffff;
+				border-left: solid 0.5em transparent;
+				border-right: solid 0.5em transparent;
+				-moz-transition: border-bottom-width .25s ease-in-out;
+				-webkit-transition: border-bottom-width .25s ease-in-out;
+				-ms-transition: border-bottom-width .25s ease-in-out;
+				transition: border-bottom-width .25s ease-in-out;
+			}
+
+			#download a span {
+				display: block;
+				position: absolute;
+				background: #222222;
+				color: #ffffff;
+				top: -2.75em;
+				font-size: 0.3em;
+				height: 2.25em;
+				line-height: 2.25em;
+				left: 50%;
+				opacity: 0;
+				-moz-transition: opacity .25s ease-in-out;
+				-webkit-transition: opacity .25s ease-in-out;
+				-ms-transition: opacity .25s ease-in-out;
+				transition: opacity .25s ease-in-out;
+				width: 5.5em;
+				margin-left: -2.75em;
+			}
+
+				#download a span:after {
+					content: '';
+					display: block;
+					position: absolute;
+					bottom: -0.4em;
+					left: 50%;
+					margin-left: -0.6em;
+					border-top: solid 0.6em #222222;
+					border-left: solid 0.6em transparent;
+					border-right: solid 0.6em transparent;
+				}
+
+			#download a:hover {
+				opacity: 1.0;
+			}
+
+				#download a:hover span {
+					opacity: 1.0;
+				}
+
+			#download a.active {
+				opacity: 1.0;
+			}
+
+				#download a.active:after {
+					border-bottom-width: 0.5em;
+				}
+
+		@media screen and (max-width: 980px) {
+
+			#download {
+				font-size: 70%;
+				right: 1em;
+				top: 3em;
+			}
+
+			#download a span {
+				opacity: 1.0;
+			}
+
+		}
