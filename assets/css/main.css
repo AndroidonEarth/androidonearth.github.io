@@ -1308,7 +1308,8 @@ input, select, textarea {
 	body {
 		background-image: url("images/overlay.png"), url("images/bg.jpg");
 		background-repeat: repeat, no-repeat;
-		background-size: auto, 100% 100%;
+		background-size: cover;
+		background-position: center;
 		background-attachment: fixed;
 		overflow-y: scroll;
 	}
@@ -2246,18 +2247,52 @@ input, select, textarea {
 		}
 
 /* Resume */
+	
+		#resume header {
+			margin-bottom: 2em;
+		}
 
 		#resume h3 {
 			padding-bottom: 0.25em;
-			margin-bottom: 0.75em;
+			margin: -0.75em 0 0.75em 0;
 			border-bottom: dashed 2px rgba(213, 209, 203, 0.5);
 		}
 
 		#resume p {
+			font-size: 80%;
+			margin: -0.5em 0;
+		}
+
+			@media screen and (max-width: 980px) {
+
+				#resume p {
+					line-height: 17px;
+					margin: 0;
+				}
+			}
+
+			#resume p > strong {
+				font-size: 120%;
+			}
+
+		#resume ul {
 			margin-bottom: 0;
 		}
 
-		#resume ul {
+		#resume li {
+			margin: -0.5em 0;
+			font-size: 80%;
+		}
+
+			@media screen and (max-width: 980px) {
+
+				#resume li {
+					line-height: 17px;
+					margin: 0;
+				}
+			}
+
+		#resume .row {
 			margin-bottom: 1em;
 		}
 
