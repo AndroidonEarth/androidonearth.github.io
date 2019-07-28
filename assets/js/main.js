@@ -1,6 +1,6 @@
 /*
-	Astral by HTML5 UP
-	html5up.net | @ajlkn
+	Personal/Professional Website and Portfolio of Andrew Swaim
+	Based on templates by @ajlkn from HTML5 Up
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
