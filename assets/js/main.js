@@ -52,6 +52,13 @@
 
 			});
 
+	// Info Icon.
+		$(".icon").click(
+			function() {
+				$(this).toggleClass("select");
+			}
+		);
+
 	// Contact.
 		$contact.submit(function(event) { 
 

@@ -1325,7 +1325,7 @@ input, select, textarea {
 			transition: none !important;
 		}
 
-	body, input, textarea, select {
+	body, input, textarea, select, span {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 300;
 		color: #666666;
@@ -1545,6 +1545,7 @@ input, select, textarea {
 
 		}
 
+
 /* Image */
 
 	.image {
@@ -1601,6 +1602,7 @@ input, select, textarea {
 		cursor: pointer;
 		outline: 0;
 		padding: 0.7em 1.5em 0.7em 1.5em;
+		text-decoration: none;
 	}
 
 		input[type="button"]:hover,
@@ -2417,4 +2419,93 @@ input, select, textarea {
 				opacity: 1.0;
 			}
 
+		}
+
+/* Info */
+
+	#info {
+		text-align: center;
+		cursor: default;
+		font-size: 90%;
+		position: absolute;
+		right: 2em;
+		top: 4em;
+	}
+
+		#info .icon {
+			position: relative;
+			display: inline-block;
+			color: #000000;
+			line-height: 0.9em;
+			font-size: 1.5em;
+			margin: 0 0.25em 0 0.25em;
+			opacity: 0.35;
+			outline: 0;
+			-moz-transition: opacity .25s ease-in-out;
+			-webkit-transition: opacity .25s ease-in-out;
+			-ms-transition: opacity .25s ease-in-out;
+			transition: opacity .25s ease-in-out;
+		}
+
+		#info span {
+			display: block;
+			position: absolute;
+			color: #666666;
+			font-size: 0.5em;
+			width: 35em;
+			left: -33em;
+			bottom: 0;
+			top: 0;
+			right: 0;
+			opacity: 0;
+			-moz-transition: opacity .25s ease-in-out;
+			-webkit-transition: opacity .25s ease-in-out;
+			-ms-transition: opacity .25s ease-in-out;
+			transition: opacity .25s ease-in-out;
+		}
+
+			#info .icon:hover {
+				opacity: 1.0;
+			}
+
+			#info .icon.select {
+				opacity: 1.0;
+			}
+
+				#info .icon:hover span {
+					opacity: 1.0;
+				}
+
+				#info .icon.select span {
+					opacity: 1.0;
+				}
+
+/* Box */
+
+	.box {
+		position: relative;
+		background: #fff;
+		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+		text-align: center;
+		height: 25em;
+	}
+
+		.box h3 {
+			margin-bottom: 0.25em;
+		}
+
+		.box .image {
+			margin-bottom: 2em;			
+			width: 100%;
+		}
+
+		.box p {
+			font-size: 80%;
+		}
+
+		.box .buttons {
+			position: absolute;
+			width: 100%;
+			margin-bottom: 0.7em;
+			bottom: 0;
 		}
