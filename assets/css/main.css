@@ -2451,7 +2451,7 @@ input, select, textarea {
 			display: block;
 			position: absolute;
 			color: #666666;
-			font-size: 0.5em;
+			font-size: 50%;
 			width: 35em;
 			left: -33em;
 			bottom: 0;
@@ -2480,6 +2480,34 @@ input, select, textarea {
 					opacity: 1.0;
 				}
 
+		@media screen and (max-width: 980px) {
+
+			#info {
+				font-size: 100%;
+			}
+
+			#info span {
+				font-size: 50%;
+				top: -1em;
+				width: 20em;
+				left: -19em;
+			}
+		}
+
+
+		@media screen and (max-width: 736px) {
+
+			#info {
+				right: 1em;
+				top: 2em;
+			}
+
+			#info span {
+				left: -18em;
+			}
+		}
+
+
 /* Box */
 
 	.box {
@@ -2487,25 +2515,47 @@ input, select, textarea {
 		background: #fff;
 		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
 		text-align: center;
-		height: 25em;
+		padding-bottom: 0.8em;
 	}
+
+		.box .image {
+			margin-bottom: 1em;		
+			width: 100%;
+		}
+
+		.box .content {
+			padding: 0 0.5em 0 0.5em;
+			height: 10em;
+		}
 
 		.box h3 {
 			margin-bottom: 0.25em;
-		}
-
-		.box .image {
-			margin-bottom: 2em;			
-			width: 100%;
 		}
 
 		.box p {
 			font-size: 80%;
 		}
 
-		.box .buttons {
-			position: absolute;
-			width: 100%;
-			margin-bottom: 0.7em;
-			bottom: 0;
+		.box .button {
+			padding: 0.25em 1em;
+			margin: 0 0.3em;
+		}
+
+		@media screen and (max-width: 980px) {
+
+			.box p {
+				font-size: 100%;
+			}
+
+			.box .button {
+				padding: 0.4em 1.5em;
+			}
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.box .button {
+				padding: 0.5em 2em;
+				width: 40%;
+			}
 		}
