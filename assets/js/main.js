@@ -160,7 +160,7 @@
 
 				// Unload iframes.
 					$("iframe").each(function() {
-						$(this).attr('src', "about:blank");
+						$(this).attr('src', "/demo_placeholder.html");
 					});
 
 				// Clear input fields
